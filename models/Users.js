@@ -15,6 +15,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  picture: String,
+  resumeData: {
+    type: Object,
+    default: {}
+  }
 })
 
 module.exports = mongoose.model('User', userSchema)
